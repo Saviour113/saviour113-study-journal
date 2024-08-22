@@ -168,19 +168,19 @@
                             window.open(url, '_blank');
                         });
                     }
-                    if (highlightDates3.includes(currentDate)) {
-                        dayElement.classList.add('highlight1');
-                        dayElement.addEventListener('click', () => {
-                            let urlSuffix = currentDate.toString() >= specialDate ? '/note' : '';
-                            const url = `https://gitee.com/saviour113/web1/tree/master/src/day_${currentDate.toString().slice(2) }`;
-                            window.open(url, '_blank');
-                        });
-                    }
                     if (highlightDates2.includes(currentDate)) {
                         dayElement.classList.add('highlight');
                         dayElement.addEventListener('click', () => {
                             let urlSuffix = currentDate.toString() >= specialDate ? '/note' : '';
                             const url = `https://gitee.com/saviour113/javaproject-maven/tree/master/src/main/java/day_${currentDate.toString().slice(2) }`;
+                            window.open(url, '_blank');
+                        });
+                    }
+                    if (highlightDates3.includes(currentDate)) {
+                        dayElement.classList.add('highlight1');
+                        dayElement.addEventListener('click', () => {
+                            let urlSuffix = currentDate.toString() >= specialDate ? '/note' : '';
+                            const url = `https://gitee.com/saviour113/web1/tree/master/src/day_${currentDate.toString().slice(2) }`;
                             window.open(url, '_blank');
                         });
                     }
