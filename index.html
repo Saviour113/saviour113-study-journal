@@ -81,6 +81,13 @@
         .day.highlight1:hover{
             background-color: #00ecff;
         }
+        .day.highlight_web2 {
+            background-color: seagreen;
+            cursor: pointer;
+        }
+        .day.highlight_web2:hover {
+            background-color: darkseagreen;
+        }
     </style>
 </head>
 <body>
@@ -174,6 +181,13 @@
                         dayElement.addEventListener('click', () => {
                             let urlSuffix = currentDate.toString() >= specialDate ? '/note' : '';
                             const url = `https://gitee.com/saviour113/javaproject-maven/tree/master/src/main/java/day_${currentDate.toString().slice(2) }`;
+                            window.open(url, '_blank');
+                        });
+                    }
+                    if (highlightDates4.includes(currentDate)) {
+                        dayElement.classList.add('highlight_web2');
+                        dayElement.addEventListener('click', () => {
+                            const url = `https://gitee.com/saviour113/saviour113-web2-myserver/tree/main/day${currentDate.toString().slice(2) }`;
                             window.open(url, '_blank');
                         });
                     }
