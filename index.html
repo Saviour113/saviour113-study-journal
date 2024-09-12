@@ -109,6 +109,8 @@
         const highlightDates3 = [20240329,20240331,20240410,20240412,20240414,20240417,20240419]
         // 新的 Web2 仓库
         const highlightDates4 = [20240822,20240823,20240902,20240904,20240908];
+        // 新的 home 仓库
+        const highlightHome = [20240909];
         let urlSuffix = '';
         const specialDate = '20240420';
 
@@ -188,6 +190,13 @@
                         dayElement.classList.add('highlight_web2');
                         dayElement.addEventListener('click', () => {
                             const url = `https://gitee.com/saviour113/saviour113-web2/tree/master/src/main/webapp/day_${currentDate.toString().slice(2) }`;
+                            window.open(url, '_blank');
+                        });
+                    }
+                    if (highlightHome.includes(currentDate)) {
+                        dayElement.classList.add('highlight_web2');
+                        dayElement.addEventListener('click', () => {
+                            const url = `https://gitee.com/saviour113/home/tree/master/src/main/webapp/day_${currentDate.toString().slice(2) }`;
                             window.open(url, '_blank');
                         });
                     }
